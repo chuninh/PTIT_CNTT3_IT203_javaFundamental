@@ -1,20 +1,10 @@
 package ss3;
 
-import java.util.Scanner;
 public class bai3 {
-    public static void main(String[] args) {
 
-        String[] names = {
-                "Lap trinh Java",
-                "Cau truc du lieu",
-                "Co so du lieu",
-                "Lap trinh Python",
-                "He dieu hanh"
-        };
-
-        int[] quantities = {10, 5, 10, 3, 3};
-
+    public static void maxQuantityOfBooks(String[] names, int[] quantities) {
         int max = quantities[0];
+
         for (int i = 1; i < quantities.length; i++) {
             if (quantities[i] > max) {
                 max = quantities[i];
@@ -27,8 +17,11 @@ public class bai3 {
                 System.out.println("- " + names[i] + ": " + quantities[i]);
             }
         }
+    }
 
+    public static void minQuantityOfBooks(String[] names, int[] quantities) {
         int min = quantities[0];
+
         for (int i = 1; i < quantities.length; i++) {
             if (quantities[i] < min) {
                 min = quantities[i];
@@ -41,5 +34,20 @@ public class bai3 {
                 System.out.println("- " + names[i] + ": " + quantities[i]);
             }
         }
+    }
+
+    public static void main(String[] args) {
+        String[] names = {
+                "Lap trinh Java",
+                "Cau truc du lieu",
+                "Co so du lieu",
+                "Lap trinh Python",
+                "He dieu hanh"
+        };
+
+        int[] quantities = {10, 5, 10, 3, 3};
+
+        maxQuantityOfBooks(names, quantities);
+        minQuantityOfBooks(names, quantities);
     }
 }
