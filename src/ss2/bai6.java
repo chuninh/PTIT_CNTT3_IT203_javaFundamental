@@ -12,19 +12,15 @@ public class bai6 {
         for (int i = 1; i <= 7; i++) {
             System.out.print("Nhap so luot muon cua ngay thu " + i + ": ");
             int borrow = Integer.parseInt(sc.nextLine());
-
             if (borrow == 0) {
                 continue;
             }
-
             if (borrow > max) {
                 max = borrow;
             }
-
             if (borrow < min) {
                 min = borrow;
             }
-
             sum += borrow;
             count++;
         }
