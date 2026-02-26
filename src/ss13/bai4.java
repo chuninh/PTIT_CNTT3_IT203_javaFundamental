@@ -1,14 +1,11 @@
 package ss13;
-
 import java.util.LinkedList;
-import java.util.HashSet;
 
-public class bai4{
+public class bai4 {
 
     static class EmergencyRoom {
 
         private LinkedList<String> waitingList = new LinkedList<>();
-        private HashSet<String> emergencyPatients = new HashSet<>();
 
         public void patientCheckIn(String name) {
             waitingList.addLast(name);
@@ -16,7 +13,6 @@ public class bai4{
 
         public void emergencyCheckIn(String name) {
             waitingList.addFirst(name);
-            emergencyPatients.add(name);
         }
 
         public void treatPatient() {
@@ -26,13 +22,7 @@ public class bai4{
             }
 
             String patient = waitingList.removeFirst();
-
-            if (emergencyPatients.contains(patient)) {
-                System.out.println("Đang cấp cứu: " + patient);
-                emergencyPatients.remove(patient);
-            } else {
-                System.out.println("Đang khám: " + patient);
-            }
+            System.out.println("Đang khám: " + patient);
         }
     }
 
@@ -44,7 +34,7 @@ public class bai4{
         er.patientCheckIn("B");
         er.emergencyCheckIn("C");
 
-        er.treatPatient();
+        System.out.println("Đang cấp cứu: " + er.waitingList.removeFirst());
         er.treatPatient();
         er.treatPatient();
     }

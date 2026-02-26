@@ -112,7 +112,7 @@ public class bai5 {
             public int compare(Patient p1, Patient p2) {
 
                 if (p2.getAge() != p1.getAge()) {
-                    return p2.getAge() - p1.getAge(); // tuổi giảm dần
+                    return p2.getAge() - p1.getAge();
                 }
 
                 return p1.getFullName().compareToIgnoreCase(p2.getFullName());
@@ -128,7 +128,7 @@ public class bai5 {
             return;
         }
 
-        System.out.println("\n===== DANH SÁCH BỆNH NHÂN =====");
+        System.out.println("\n DANH SÁCH BỆNH NHÂN");
         for (Patient p : patientList) {
             System.out.println(p);
         }
@@ -146,7 +146,7 @@ public class bai5 {
     public static void main(String[] args) {
 
         while (true) {
-            System.out.println("\n===== QUẢN LÝ BỆNH NHÂN =====");
+            System.out.println("\n QUẢN LÝ BỆNH NHÂN ");
             System.out.println("1. Tiếp nhận bệnh nhân");
             System.out.println("2. Cập nhật chẩn đoán");
             System.out.println("3. Xuất viện");

@@ -4,22 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class bai3 {
-
     public static <T> List<T> findCommonPatients(List<T> listA, List<T> listB) {
-
         List<T> result = new ArrayList<>();
-
         for (T element : listA) {
             if (listB.contains(element) && !result.contains(element)) {
                 result.add(element);
             }
         }
-
         return result;
     }
 
     public static void main(String[] args) {
-
         List<Integer> noiKhoaIDs = new ArrayList<>();
         noiKhoaIDs.add(101);
         noiKhoaIDs.add(102);
@@ -32,7 +27,6 @@ public class bai3 {
 
         List<Integer> commonIDs = findCommonPatients(noiKhoaIDs, ngoaiKhoaIDs);
         System.out.println("Test Case 1 Output: " + commonIDs);
-
 
         List<String> noiKhoaBHYT = new ArrayList<>();
         noiKhoaBHYT.add("DN01");

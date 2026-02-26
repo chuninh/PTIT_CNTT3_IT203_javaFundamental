@@ -20,14 +20,12 @@ public class bai1 {
 
         while (iterator.hasNext()) {
             Double temp = iterator.next();
-
             if (temp < 34.0 || temp > 42.0) {
                 iterator.remove();
             }
         }
 
         System.out.println("Danh sách sau khi lọc: " + temperatures);
-
         double sum = 0;
         for (Double temp : temperatures) {
             sum += temp;
